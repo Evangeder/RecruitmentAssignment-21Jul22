@@ -6,7 +6,3 @@ Architecture decisions made in this project are stored in ADR, within a folder `
 
 ## Author
 Created by: `Bartłomiej 'Evan' Szolc`
-
-EMAIL: `Evangeder@gmail.com`
-
-Phone Number: `+48 794 148 832`
