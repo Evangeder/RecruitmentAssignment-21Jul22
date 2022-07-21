@@ -17,6 +17,24 @@ namespace RecruitmentAssignmentSente
             var transfersFilePath = args[0];
             var structureFilePath = args[1];
 
+            var transfers = new XmlReader<XSD.Transfers>(transfersFilePath).Read();
+            var structure = new XmlReader<XSD.Structure>(structureFilePath).Read();
+
+            var transfersDataManager = new DataManager
+            {
+                EmployeeHierarchy = structure
+            };
+
+            transfersDataManager.BuildEmployeeDictionaries();
+            transfersDataManager.CalculateTransfers(transfers);
+            var employees = transfersDataManager.GetAllEmployeesSorted();
+
+            foreach (var employee in employees)
+            {
+                var subordinatesWithoutTheirSubordinates = transfersDataManager.GetAllSubordinatesWithoutTheirSubordinates(employee.Id);
+                Console.WriteLine($"{employee.Id} {employee.Level} {subordinatesWithoutTheirSubordinates} {employee.MonetaryCommision}");
+            }
+
             Console.Read();
         }
 

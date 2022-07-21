@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RecruitmentAssignmentSente": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../../sample_przelewy.xml ../../../../sample_struktura.xml"
+    }
+  }
+}
