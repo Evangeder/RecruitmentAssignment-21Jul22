@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace XSD
+namespace RecruitmentAssignmentSente.XSD
 {
     [XmlType(AnonymousType = true)]
     [XmlRoot("uczestnik", Namespace = "", IsNullable = true)]
