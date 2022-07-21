@@ -1,4 +1,4 @@
-# Project Type
+# XML Schema Definition
 
 Date: 2022-JUL-21
 
